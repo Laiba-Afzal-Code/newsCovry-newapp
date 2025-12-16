@@ -1,0 +1,35 @@
+.category-posts {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.category-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.loading,
+.no-posts {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #555;
+}
+.back-link:hover {
+  color: #000;
+}

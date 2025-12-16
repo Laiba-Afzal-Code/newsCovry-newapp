@@ -7,6 +7,10 @@ import {
   createPost,
   updatePost,
   deletePost,
+  getSpecificPost,
+  getLatest,
+  getPostsByCategory,
+  SearchResult,
 } from "../controllers/postController.js";
 
 const app = express();
@@ -28,13 +32,17 @@ app.post("/upload", upload.single("image"), (req, res) => {
 
 // const upload = multer({ dest: "uploads/" });
 const router = express.Router();
-
+// Route: GET /api/posts/category/:category
+router.get("/category/:category", getPostsByCategory);
 router.get("/getallpost", getPosts);
+router.get("/getSpecificCate", getSpecificPost);
+router.get("/getlatest", getLatest);
+// Make sure this is BEFORE any dynamic routes like /:id
+router.get("/search", SearchResult);
+
 router.get("/:id", getPost);
 router.post("/postcreate", protect, upload.single("image"), createPost);
-router.put("/:id", protect, upload.single("image"), updatePost);
+router.put("/update/:id", protect, upload.single("image"), updatePost);
 router.delete("/:id", protect, deletePost);
-
-
 
 export default router;

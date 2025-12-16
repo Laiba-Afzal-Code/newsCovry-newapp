@@ -1,0 +1,273 @@
+.all-categories{
+ display: flex;
+ flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px 30px;
+}
+.rightc{
+  flex: 2;
+}
+.leftc{
+  flex: 1;
+}
+.category-section {
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.section-title {
+  border-bottom: 3px solid #000;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.section-title.purple {
+  border-color: #a100ff;
+}
+
+.section-title.gold {
+  border-color: #ffa500;
+}
+
+/* --- TECH --- */
+.tech-section .card-row {
+  display: flex;
+  gap: 10px;
+}
+.tech-card {
+  flex: 1;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 2px 8px rgba(13, 13, 13, 0.1);
+  height: 300px;
+  position: relative;
+}
+.tech-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 80%;
+}
+.tech-card .card-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+  padding: 15px 10px;
+}
+.card-content .category {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.card-content h3 {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+/* --- GLOBAL --- */
+.globaltech-section .card-row {
+  display: flex;
+  gap: 10px;
+}
+.global-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  text-decoration: none;
+}
+.global-card img {
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.glb {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+.glb h3 { 
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+/* --- BUSINESS --- */
+.business-section .business-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.business-item {
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: rgba(13, 13, 13, 0.1);
+  border-radius: 5px;
+  padding:10px ;
+} 
+.fashion-list {
+ display: flex;
+  flex-direction: column;
+  gap: 5px;;
+}
+.fashion-item {
+  display: flex;
+  gap: 5px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: rgba(13, 13, 13, 0.1);
+  border-radius: 5px;
+  padding:6px ;
+} 
+.business-item:hover{
+  background-color: #efeff0;
+}
+.fashion-item:hover{
+  background-color: #efeff0;
+}
+.business-item img {
+  width: 200px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.fashion-item img {
+  width: 180px;
+  height: 85px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.busc {
+  height: 100%;
+  width: 100%;
+}
+.infobus {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.busc .category {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}
+
+.busc h3{
+margin: 0;
+}
+
+
+
+/* --- Responsive Media Queries --- */
+
+/* Large tablets / small desktops */
+@media (max-width: 1024px) {
+  .all-categories {
+    padding: 10px 20px;
+    gap: 4px;
+  }
+  .rightc {
+    flex: 2;
+  }
+  .leftc {
+    flex: 1;
+  }
+  .tech-section .card-row,
+  .globaltech-section .card-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tech-card,
+  .global-card {
+    width: calc(50% - 8px);
+  }
+  .business-item img {
+    width: 150px;
+    height: 80px;
+  }
+  .fashion-item img {
+    width: 140px;
+    height: 70px;
+  }
+}
+
+/* Tablets / landscape phones */
+@media (max-width: 768px) {
+  .all-categories {
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 15px;
+  }
+  .rightc,
+  .leftc {
+    flex: 1 1 100%;
+  }
+  .tech-section .card-row,
+  .globaltech-section .card-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tech-card,
+  .global-card {
+    width: 100%;
+  }
+  .business-item img {
+    width: 100px;
+    height: 60px;
+  }
+  .fashion-item img {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .category-section {
+    padding: 0 10px;
+  }
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .tech-card {
+    height: 220px;
+  }
+  .tech-card img {
+    height: 220px;
+  }
+  .global-card img {
+    width: 100px;
+    height: 60px;
+  }
+  .business-item img {
+    width: 90px;
+    height: 55px;
+  }
+  .fashion-item img {
+    width: 80px;
+    height: 45px;
+  }
+  .busc .category {
+    font-size: 12px;
+  }
+  .glb h3,
+  .busc h3 {
+    font-size: 16px;
+  }
+}

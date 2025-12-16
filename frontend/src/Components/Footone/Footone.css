@@ -1,0 +1,95 @@
+/* components/Footer.css */
+.footer {
+    background-color: rgb(1, 0, 21);
+  color: white;
+  text-align: center;
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* position: absolute;
+  left: 0;
+  bottom: 0; */
+
+}
+
+.footlogo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+}
+
+.footer .footname {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.footpara {
+  width: 60%;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 14px;
+}
+
+.socialicons {
+  display: block;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.emailfoot {
+  color: rgb(15, 179, 200);
+  cursor: pointer;
+  font-size: 14px;
+}
+.footer-social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 2rem;
+ width: 100%;
+}
+
+.footcopy {
+  font-size: 14px;
+  color: #6c6b6a;
+
+}
+
+.links {
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+.links a{
+  text-decoration: none;
+  color: #6c6b6a;
+  font-size: 14px;
+}
+.fnav {
+  font-size: 14px;
+  color: #6c6b6a;
+  cursor: pointer;
+ 
+}
+

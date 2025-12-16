@@ -1,0 +1,63 @@
+/* components/Destinations.css */
+.dds {
+  height: 100vh auto;
+  padding: 2rem 5rem;
+  background-color: transparent;
+  /* border-bottom: 1px solid gray; */
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.destination-card {
+  height: 300px auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 1px 3px 6px rgba(212, 211, 211, 0.5);
+  background-color: white;
+  /* border: 1px solid gray; */
+}
+
+.imgcared {
+  position: relative;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.aat {
+  padding: 7px 16px;
+}
+
+
+.destination-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: black;
+  padding-top:5px;
+}
+
+.pcate {
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.destination-card .p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(111, 111, 111);
+  text-decoration: none;
+  color: gray;
+}
