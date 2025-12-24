@@ -4,6 +4,7 @@ import axios from "axios";
 import BACKEND_URL from "../../config";
 import "./Navbar.css";
 
+import { slugify } from "../../function/slugify";
 const NavbarSearch = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -107,7 +108,8 @@ const NavbarSearch = () => {
               key={post._id}
               className="search-card"
               onClick={() => {
-                navigate(`/post/${post._id}/open`);
+                navigate(`/post/${post._id}/${slugify(post.title)}/open`);
+                
                 setShowDropdown(false);
               }}
             >
