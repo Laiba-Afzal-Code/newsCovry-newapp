@@ -1,299 +1,301 @@
 .blogopen {
-    display: flex;
-    padding: 2rem 5rem;
-    position: relative;
+  display: flex;
+  padding: 2rem 5rem;
+  position: relative;
+  gap: 1rem;
   /* background-color: rgb(1, 0, 21); */
 }
 
 .blogleft {
-    flex: 3;
-    height: 100vh fixed;
-    padding-top: 40px;
+  flex: 2 1;
+  height: 100vh fixed;
+  padding-top: 40px;
 }
-
 
 /* width */
 ::-webkit-scrollbar {
-    width: 2px;
-
+  width: 2px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 1px grey;
-    border-radius: 10px;
+  box-shadow: inset 0 0 1px grey;
+  border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(to top, rgb(15, 179, 200), rgb(3, 49, 135));
-    border-radius: 10px;
-    width: 3px;
-    height: 10px;
+  background-image: linear-gradient(to top, rgb(15, 179, 200), rgb(3, 49, 135));
+  border-radius: 10px;
+  width: 3px;
+  height: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-
+  background: #555;
 }
 
 .loca {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .loc {
-    color: gray;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 0;
-
+  color: gray;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0;
 }
 
 .loc:hover {
-    color: rgb(87, 87, 87);
+  color: rgb(87, 87, 87);
 }
 
 .mainheadblog {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
 }
 
 .pag {
-    font-size: 20px;
-    font-weight: 600;
-    color: gray;
-    margin: 0;
-    margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: gray;
+  margin: 0;
+  margin-top: 30px;
 }
 
 .pag:hover {
-    color: #014268;
+  color: #014268;
 }
 
 .blh {
-    font-size: 3rem;
-    font-weight: 700;
-    color: black;
-    margin: 0;
-    max-width: 90%;
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+  max-width: 90%;
 }
 
 .a {
-    text-decoration: none;
-    color: inherit;
-
+  text-decoration: none;
+  color: inherit;
 }
 
 .badmindata {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .authori {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1.5px solid gray;
-    display: flex;
-    align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid gray;
+  display: flex;
+  align-items: center;
 }
 
 .auho {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 .auho:hover {
-    color: #014268;
-    text-decoration: underline;
+  color: #014268;
+  text-decoration: underline;
 }
 
 .apd {
-    font-size: 14px;
-    color: gray;
-    font-weight: 500;
-    margin: 0;
-    margin-right: 4px;
+  font-size: 14px;
+  color: gray;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 4px;
 }
 
 .moread {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 90%;
-    padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 2rem;
 }
 
 .pread {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .blogimg {
-    width: 90%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .blogtext {
-    width: 90%;
-    padding-top: 2rem;
+  width: 90%;
+  padding-top: 2rem;
 }
 
 .blogtp {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: black;
-    margin: 0;
-    padding-bottom: 50px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: black;
+  margin: 0;
+  padding-bottom: 50px;
 }
-.blogopenh{
-    color: black;
+.blogopenh {
+  color: black;
 }
 
 .blogicon {
-    display: block;
-    gap: 0.5rem;
-    max-width: 90%;
-    border-top: 01px solid rgb(199, 197, 197);
-    border-bottom: 01px solid rgb(199, 197, 197);
-
+  display: block;
+  gap: 0.5rem;
+  max-width: 90%;
+  border-top: 01px solid rgb(199, 197, 197);
+  border-bottom: 01px solid rgb(199, 197, 197);
 }
 
 .blogi {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    margin: 0;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  margin: 0;
 }
 
 .svgicon {
-    margin: 0;
-
+  margin: 0;
 }
 
 .social {
-    font-size: 2rem;
-    color: rgb(47, 47, 47);
+  font-size: 2rem;
+  color: rgb(47, 47, 47);
 }
 
 .blogright {
-    flex: 0 1;
-
+  flex: 1 1;
 }
-.expiBps{
-    color: gray;
-    font-size: 14px ;
-    font-weight: 500;
+.expiBps {
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
 }
 .blogside {
-    width: 100%;
-    padding-top: 2rem;
+  width: 100%;
+  padding-top: 2rem;
 }
 
 .loding {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .blogside-bar {
-    height: 800px;
-    overflow-y: scroll;
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
+  height: 800px;
+  overflow-y: scroll;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
 }
 
 .bolgcardc {
-    width: 100%;
-    padding: 2rem 0;
+  width: 100%;
+  padding: 2rem 0;
 }
 
 .headblog {
-    display: flex;
-    justify-content: left;
-    color: black;
-    flex: 1, 1;
-    align-items: flex-end;
-    margin: 10px;
-    gap: 1rem;
-    font-size: 2rem;
-
+  display: flex;
+  justify-content: left;
+  color: black;
+  flex: 1, 1;
+  align-items: flex-end;
+  margin: 10px;
+  gap: 1rem;
+  font-size: 2rem;
 }
 
 /* Blogcard css */
 .blog-cardd {
-    display: flex;
-    /* flex-direction: row; */
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0;
-    width: 100%;
-    height: 300px;
-    padding: 1rem 0;
-
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  height: 300px;
+  padding: 1rem 0;
 }
 
 .blog-card-image {
-    position: relative;
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-
+  position: relative;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .imgcb {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .cardcontent {
-    position: absolute;
-    bottom: 10px;
-    right: 5px;
-    left: 5px;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  left: 5px;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
 }
 
 .bca {
-    text-align: center;
-    font-weight: 400;
-    color: white;
-    font-size: 15px;
-    margin: 0;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+  font-size: 15px;
+  margin: 0;
 }
 
 .cardh {
-    text-align: center;
-    font-weight: 600;
-    color: white;
-    font-size: 20px;
-    padding: 1rem;
-    margin: 0;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  padding: 1rem;
+  margin: 0;
 }
+.categoryshow {
+  margin: 10px;
+  margin-top: 50px;
+  padding: 10px 50px;
+  background-color: #f6f5f554;
+  border-radius: 20px;
 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.079);
+}
+.categoryshow h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.cateli {
+  color: black;
+}
 
 /* --- Responsive Media Queries --- */
 
@@ -362,7 +364,6 @@
     flex-direction: column;
     gap: 0.5rem;
   }
- 
 
   .blog-card-image {
     width: 100%;
@@ -416,7 +417,7 @@
     width: 100%;
     height: 150px;
   }
-   .headblog{
+  .headblog {
     font-size: 1rem;
   }
 
@@ -437,7 +438,7 @@
     height: 400px;
     padding: 0.5rem 0;
   }
-  .linedesign{
+  .linedesign {
     display: none;
   }
 }

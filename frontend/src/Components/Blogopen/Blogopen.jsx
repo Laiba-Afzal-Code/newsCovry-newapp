@@ -1,14 +1,16 @@
 import "./Blogopen.css";
 import { Link } from "react-router-dom";
 import User from "../../images/user.png"; // Assuming you have a user image in the images folder
-import { getReadingTime } from '../../function/readingTime.js'
+import { getReadingTime } from "../../function/readingTime.js";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BACKEND_URL from "../../config";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 
-import CategorySections, {GlobalTechSection} from "../../Pages/CategorySections.jsx"
+// import CategorySections, {
+//   GlobalTechSection,
+// } from "../../Pages/CategorySections.jsx";
 import LatestPostsCarousel from "../PostsCarousel/LatestPostsCarousel.jsx";
 import { slugify } from "../../function/slugify.js";
 
@@ -17,16 +19,16 @@ const Blogopen = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [latest, setLatest] = useState([]);
- const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${BACKEND_URL}posts/category/business`)
+      .get(`${BACKEND_URL}posts/category`)
       //   .get(`${BACKEND_URL}posts/category/business`)
       .then((res) => setPosts(res.data))
       .catch((err) => console.error(err));
   }, []);
- 
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -47,6 +49,10 @@ const Blogopen = () => {
     const fetchLatestPosts = async () => {
       try {
         const res = await axios.get(`${BACKEND_URL}posts/getlatest`);
+        const cates = res.data.posts || res.data;
+        const uniqueCats = [...new Set(cates.map((p) => p.category))];
+        setCategories(uniqueCats);
+        console.log(setCategories);
         setLatest(res.data);
         console.log(res.data);
       } catch (error) {
@@ -134,8 +140,7 @@ const Blogopen = () => {
                   opacity="0.5"
                 />
               </svg>
-              <p className="apd" >{getReadingTime(post.content)}</p>
-              
+              <p className="apd">{getReadingTime(post.content)}</p>
             </div>
           </div>
           <div className="imgpak">
@@ -146,9 +151,9 @@ const Blogopen = () => {
               className="blogtp"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
-            <p className="p">{post.keywords}</p>
+            <p className="apd">{post.keywords}</p>
           </div>
-          
+
           <a
             href={
               post.backlink.startsWith("http")
@@ -161,9 +166,7 @@ const Blogopen = () => {
             {post.backlink}
           </a>
 
-          <h1 className="headblog ">
-            Our Social Links 
-          </h1>
+          <h1 className="headblog ">Our Social Links</h1>
           <div className="blogicon">
             <div className="blogi">
               <Link
@@ -295,9 +298,7 @@ const Blogopen = () => {
             </div>
           </div>
           <div className="bolgcardc">
-            <h1 className="headblog">
-              Related Articals 
-            </h1>
+            <h1 className="headblog">Related Articals</h1>
             {/* <Destinations /> */}
             <LatestPostsCarousel interval={3000} />
 
@@ -308,9 +309,7 @@ const Blogopen = () => {
         </div>
         <div className="blogright">
           <div className="blogside">
-            <h1 className="headblog">
-              Latest Articles 
-            </h1>
+            <h1 className="headblog">Latest Articles</h1>
 
             <div className="blogside-bar">
               {latest.map((post) => (
@@ -326,49 +325,64 @@ const Blogopen = () => {
                       <p className="expiBps">{post.createdAt.split("T")[0]}</p>
                     </div>
                     <h2 className="expibThed blogopenh">
-                      {post.title.slice(0, 60)}...
+                      {post.title.slice(0, 50)}...
                     </h2>
 
                     <div
                       className="expiBps"
                       dangerouslySetInnerHTML={{
-                        __html: post.content.slice(0, 50),
+                        __html: post.content.slice(0, 30),
                       }}
                     />
                   </div>
                 </Link>
               ))}
             </div>
-          {/* <CategorySections/> */}
-<section className="category-section business-section">
-      <h2 className="section-title gold">FASHION</h2>
-      <div className="fashion-list">
-        {posts.slice(0, 3).map((post) => (
-          <Link
-            to={`/post/${post._id}/${slugify(post.title)}/open`}
-            key={post._id}
-            className="fashion-item"
-          >
-            <img src={post.image} alt={post.title} />
-            <div className="busc">
-              <div className="infobus">
-                <p className="category">{post.category}</p>
-                <p className="category">
-                  {new Date(post.createdAt).toDateString()}
-                </p>
+            <div className="categoryshow">
+              <h2>Must Read</h2>
+
+              <div className="cardcate">
+                {categories.map((cat) => (
+                  <div className="cateul" key={cat}>
+                    <Link to={`/category/${cat}`} className="a">
+                      <p className="cateli">• {cat}</p>
+                    </Link>
+                  </div>
+                ))}
               </div>
-              <h3>{post.title.slice(0, 100)}...</h3>
-              <div
-                className="p"
-                dangerouslySetInnerHTML={{
-                  __html: post.content.slice(0, 50),
-                }}
-              />
             </div>
-          </Link>
-        ))}
-      </div>
-    </section>
+            {/* <CategorySections/> */}
+            <section className="category-section business-section">
+              {posts.slice(0, 3).map((post) => (
+                <div key={post._id}>
+                  <h2 className="section-title gold">{post.category}</h2>
+                  <div className="fashion-list">
+                    <Link
+                      to={`/post/${post._id}/${slugify(post.title)}/open`}
+                      key={post._id}
+                      className="fashion-item"
+                    >
+                      <img src={post.image} alt={post.title} />
+                      <div className="busc">
+                        <div className="infobus">
+                          <p className="category">{post.category}</p>
+                          <p className="category">
+                            {new Date(post.createdAt).toDateString()}
+                          </p>
+                        </div>
+                        <h3>{post.title.slice(0, 100)}...</h3>
+                        <div
+                          className="p"
+                          dangerouslySetInnerHTML={{
+                            __html: post.content.slice(0, 50),
+                          }}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </section>
           </div>
         </div>
       </div>

@@ -23,6 +23,7 @@ function Navbar() {
         const posts = res.data.posts || res.data;
         const uniqueCats = [...new Set(posts.map((p) => p.category))];
         setCategories(uniqueCats);
+        console.log(uniqueCats)
       } catch (err) {
         console.error(err);
         toast.error("Unable to load categories");

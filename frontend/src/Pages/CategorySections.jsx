@@ -19,22 +19,24 @@ function TechnologySection() {
 
   return (
     <section className="category-section tech-section">
-      <h2 className="section-title">TECHNOLOGY</h2>
-      <div className="card-row">
-        {posts.slice(0, 3).map((post) => (
-          <Link
-            to={`/post/${post._id}/${slugify(post.title)}/open`}
-            key={post._id}
-            className="tech-card"
-          >
-            <img src={post.image} alt={post.title} />
-            <div className="card-content">
-              <p className="category">{post.category}</p>
-              <h3>{post.title}</h3>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <>
+        <h2 className="section-title">Technology</h2>
+        <div className="card-row">
+          {posts.slice(0, 3).map((post) => (
+            <Link
+              to={`/post/${post._id}/${slugify(post.title)}/open`}
+              key={post._id}
+              className="tech-card"
+            >
+              <img src={post.image} alt={post.title} />
+              <div className="card-content">
+                <p className="category">{post.category}</p>
+                <h3>{post.title}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </>
     </section>
   );
 }
@@ -123,7 +125,7 @@ function FashionSection() {
 
   useEffect(() => {
     axios
-      .get(`${BACKEND_URL}posts/category/business`)
+      .get(`${BACKEND_URL}posts/category/fashion`)
       //   .get(`${BACKEND_URL}posts/category/business`)
       .then((res) => setPosts(res.data))
       .catch((err) => console.error(err));

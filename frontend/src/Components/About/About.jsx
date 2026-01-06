@@ -73,7 +73,7 @@ const About = () => {
                 <p className="clap"> Globaly Clients</p>
               </div>
               <div className="cardabout">
-                <h2 className="cla">1K+</h2>
+                <h2 className="cla">2K+</h2>
                 <p className="clap">Followers</p>
               </div>
               <div className="cardabout">

@@ -48,7 +48,7 @@ function Experience() {
           </h1>
 
           <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.9 }}>
-            <Link to={`/post/${post._id}/open`} className="experience-text">
+            <Link to={`/post/${post._id}/${slugify(post.title)}/open`} className="experience-text">
               <img
                 src={post.image}
                 alt={post.title}

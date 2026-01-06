@@ -16,6 +16,7 @@ const Home = () => {
         <CateHome />
         <BlogGrid/>
         <Linkedin/>
+   
       </div>
     </>
   );

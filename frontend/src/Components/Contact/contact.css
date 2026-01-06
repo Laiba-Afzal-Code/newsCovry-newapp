@@ -37,7 +37,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 818px) {
     .cmid {
         flex-direction: column;
     }
@@ -45,7 +45,7 @@
 }
 
 .left {
-    flex: 1;
+    flex: 2;
 
     position: relative;
     background-color: rgba(234, 234, 234, 0.723);
@@ -181,6 +181,7 @@ textarea {
 
 .contactblock {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;

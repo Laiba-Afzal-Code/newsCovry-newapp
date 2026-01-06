@@ -8,6 +8,7 @@ import Facebook from "../../images/facebook.png";
 import { ReactTyped } from "react-typed";
 
 import * as motion from "motion/react-client";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -39,6 +40,9 @@ function Hero() {
                 Bringing you real-time news, insights, and stories from around
                 the world—fast
               </p>
+              <Link to={"/allblogposts"} >
+            <button className="herobtn">Start Reading</button>
+              </Link>
             </div>
           </div>
         </div>
